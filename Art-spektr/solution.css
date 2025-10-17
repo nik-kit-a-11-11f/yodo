@@ -1,0 +1,6 @@
+/* Решение задачи */
+@media (max-width: 768px) {
+    .tags-container {
+        flex-wrap: wrap;
+    }
+}
