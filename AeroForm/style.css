@@ -1,0 +1,128 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.form-card > p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Стили формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Базовые стили полей ввода */
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: white;
+    
+    /* ЗАДАНИЕ: Добавьте стили для выделения активного поля здесь */
+    /* 
+    Подсказка: нужно задать:
+    1. Цвет рамки (border-color)
+    2. Свойство outline с такими параметрами:
+       - толщина: 2px
+       - стиль: solid
+       - цвет: #007BFF
+    */
+    
+}
+
+/* Стили для текстового поля */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* Стили кнопки */
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    opacity: 0.8;
+}
