@@ -1,0 +1,155 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ЗАДАНИЕ 2: Примените шрифт Roboto ко всей странице */
+/* 
+Подсказка: 
+Добавьте свойство font-family для селектора body
+Используйте шрифт: 'Roboto', sans-serif
+*/
+
+body {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700; /* Использует Roboto Bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 400; /* Использует Roboto Regular */
+}
+
+/* Основной контент */
+.hero {
+    background: white;
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #8B4513;
+    margin-bottom: 15px;
+    font-weight: 700; /* Использует Roboto Bold */
+}
+
+.coffee-name {
+    font-size: 2rem;
+    color: #D2691E;
+    margin-bottom: 25px;
+    font-weight: 700; /* Использует Roboto Bold */
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-weight: 400; /* Использует Roboto Regular */
+}
+
+/* Особенности */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.feature {
+    padding: 25px;
+    background: #FFF8F0;
+    border-radius: 15px;
+    border: 2px solid #FFE4C4;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    color: #8B4513;
+    margin-bottom: 10px;
+    font-weight: 700; /* Использует Roboto Bold */
+}
+
+.feature p {
+    color: #666;
+    font-weight: 400; /* Использует Roboto Regular */
+}
+
+/* Кнопка заказа */
+.cta-section {
+    text-align: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #8B4513;
+    margin-bottom: 20px;
+    font-weight: 700; /* Использует Roboto Bold */
+}
+
+.order-button {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700; /* Использует Roboto Bold */
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+}
+
+.order-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(139, 69, 19, 0.4);
+}
+
+.order-button:active {
+    transform: translateY(-1px);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    padding: 20px 0;
+    opacity: 0.9;
+    font-weight: 400; /* Использует Roboto Regular */
+}
