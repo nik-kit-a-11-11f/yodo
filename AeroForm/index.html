@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroForm - Онлайн опросы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AeroForm</h1>
+            <p>Сервис онлайн-опросов</p>
+        </header>
+        
+        <main>
+            <div class="form-card">
+                <h2>Опрос: Ваши предпочтения в путешествиях</h2>
+                <p>Помогите нам улучшить сервис, ответив на несколько вопросов</p>
+                
+                <form class="survey-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="travel-frequency">Как часто вы путешествуете?</label>
+                        <select id="travel-frequency" name="travel-frequency">
+                            <option value="">Выберите вариант</option>
+                            <option value="often">Чаще раза в месяц</option>
+                            <option value="monthly">Раз в месяц</option>
+                            <option value="quarterly">Раз в квартал</option>
+                            <option value="yearly">Раз в год</option>
+                            <option value="rarely">Реже раза в год</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Ваши пожелания:</label>
+                        <textarea id="comments" name="comments" placeholder="Расскажите, что для вас важно в путешествиях..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить ответы</button>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 AeroForm. Сделано с ❤️ для удобства пользователей</p>
+        </footer>
+    </div>
+</body>
+</html>
