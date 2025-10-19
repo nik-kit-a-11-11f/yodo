@@ -1,0 +1,157 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Герой секция */
+.hero {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* КАРТОЧКА ПОДПИСКИ - НАЧАЛО ЗАДАНИЯ */
+.subscription-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    
+    /* ЗАДАНИЕ 1: Добавьте тень для карточки здесь */
+    /* 
+    Подсказка: нужна мягкая, рассеянная тень
+    - Сдвиг по X: 0
+    - Сдвиг по Y: 10px
+    - Размытие: 30px
+    - Распространение: 0
+    - Цвет: rgba(0, 0, 0, 0.1)
+    */
+    
+}
+
+.subscription-content h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.subscription-description {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.price {
+    margin-bottom: 30px;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.period {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.features li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* КНОПКА ПОДПИСКИ */
+.subscribe-button {
+    width: 100%;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 18px 30px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    /* ЗАДАНИЕ 2: Добавьте тень для кнопки здесь */
+    /* 
+    Подсказка: нужна плотная, заметная тень
+    - Сдвиг по X: 0
+    - Сдвиг по Y: 8px
+    - Размытие: 15px
+    - Распространение: 0
+    - Цвет: rgba(76, 175, 80, 0.4)
+    */
+    
+}
+
+.subscribe-button:hover {
+    transform: translateY(-2px);
+    /* Дополнительная тень при наведении (опционально) */
+    box-shadow: 0 12px 20px rgba(76, 175, 80, 0.3);
+}
+
+.subscribe-button:active {
+    transform: translateY(0);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    opacity: 0.8;
+}
