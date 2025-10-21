@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtVibe - Онлайн галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">ArtVibe</div>
+            <ul class="nav-links">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Галерея</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero-title">Добро пожаловать в ArtVibe</h1>
+            <p class="hero-subtitle">Откройте для себя мир современного искусства</p>
+            <button class="cta-button">Исследовать коллекцию</button>
+        </section>
+
+        <section class="gallery">
+            <h2 class="section-title">Популярные работы</h2>
+            <div class="art-grid">
+                <div class="art-card">
+                    <div class="art-image"></div>
+                    <h3 class="art-title">"Рассвет в горах"</h3>
+                    <p class="art-author">Мария Иванова</p>
+                    <p class="art-price">24 000 ₽</p>
+                </div>
+                <div class="art-card">
+                    <div class="art-image"></div>
+                    <h3 class="art-title">"Городские огни"</h3>
+                    <p class="art-author">Алексей Петров</p>
+                    <p class="art-price">18 500 ₽</p>
+                </div>
+                <div class="art-card">
+                    <div class="art-image"></div>
+                    <h3 class="art-title">"Морская гладь"</h3>
+                    <p class="art-author">Елена Сидорова</p>
+                    <p class="art-price">32 000 ₽</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 ArtVibe Gallery. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
