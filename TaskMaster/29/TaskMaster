@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Список задач</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Мои задачи</h1>
+        <div class="task-list">
+            <div class="task">
+                <input type="checkbox" id="task1">
+                <label for="task1">Подготовить презентацию для инвесторов</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task2">
+                <label for="task2">Написать код для нового функционала</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task3">
+                <label for="task3">Провести встречу с командой разработки</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task4">
+                <label for="task4">Протестировать новую версию приложения</label>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
