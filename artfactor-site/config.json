@@ -1,0 +1,18 @@
+{
+    "site": {
+        "name": "АртФактор",
+        "version": "1.0.0",
+        "description": "Сайт студии веб-разработки АртФактор",
+        "dailyUpdates": true
+    },
+    "contact": {
+        "email": "info@artfactor.ru",
+        "phone": "+7 (495) 123-45-67",
+        "address": "Москва, ул. Примерная, д. 123"
+    },
+    "features": {
+        "responsive": true,
+        "dailyContentUpdates": true,
+        "modernDesign": true
+    }
+}
