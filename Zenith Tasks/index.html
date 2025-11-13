@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Tasks - Таск-менеджер</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .task-manager {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-list li {
+            background: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            display: flex;
+            align-items: center;
+        }
+        .task-list li::before {
+            content: "✓";
+            color: #3498db;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .empty-state {
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="task-manager">
+        <header>
+            <h1>Zenith Tasks</h1>
+            <p class="subtitle">Ваш личный помощник в управлении задачами</p>
+        </header>
+
+        <main>
+            <section class="tasks-section">
+                <h2>Мои задачи</h2>
+                
+                <ul id="taskList" class="task-list">
+                    <li>Подготовить презентацию для клиента</li>
+                    <li>Написать отчет за неделю</li>
+                    <li>Провести встречу с командой</li>
+                    <li>Изучить новые методы тайм-менеджмента</li>
+                </ul>
+
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    Пока нет задач. Добавьте первую задачу!
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="task-count">Всего задач: <span id="taskCount">4</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
