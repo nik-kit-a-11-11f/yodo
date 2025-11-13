@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд мониторинга безопасности</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .status-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .card {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .card.critical {
+            border-left-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Состояние системы</h1>
+            <p class="subtitle">Мониторинг безопасности в реальном времени</p>
+        </header>
+
+        <main>
+            <div class="status-cards">
+                <div class="card">
+                    <h3>Сетевая безопасность</h3>
+                    <p class="status">Стабильно</p>
+                    <span class="timestamp">Обновлено: 14:30</span>
+                </div>
+                <div class="card">
+                    <h3>Защита от вторжений</h3>
+                    <p class="status">Стабильно</p>
+                    <span class="timestamp">Обновлено: 14:28</span>
+                </div>
+                <div class="card critical">
+                    <h3>Антивирусная защита</h3>
+                    <p class="status">КРИТИЧЕСКО</p>
+                    <span class="timestamp">Обновлено: 14:35</span>
+                </div>
+            </div>
+
+            <div class="alerts">
+                <h2>Последние события</h2>
+                <ul>
+                    <li>14:35 - Обнаружена подозрительная активность</li>
+                    <li>14:30 - Проверка системы завершена</li>
+                    <li>14:25 - Обновление сигнатур антивируса</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
