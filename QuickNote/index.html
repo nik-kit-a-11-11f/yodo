@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNote - Быстрые заметки</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: #2d3436;
+        }
+        .app-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #2d3436;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #636e72;
+            margin-bottom: 40px;
+        }
+        .add-task-form {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 2px dashed #b2bec3;
+        }
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        #task-input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        #task-input:focus {
+            outline: none;
+            border-color: #74b9ff;
+            box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.1);
+        }
+        
+        button[type="submit"] {
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #00b894, #00a085);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+        }
+        .tasks-section h2 {
+            color: #2d3436;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #74b9ff;
+            padding-bottom: 10px;
+        }
+        
+        #task-list {
+            list-style: none;
+            padding: 0;
+        }
+        #task-list li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #74b9ff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        #task-list li::before {
+            content: "📝";
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .empty-state {
+            text-align: center;
+            color: #636e72;
+            font-style: italic;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .hint {
+            color: #636e72;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🚀 QuickNote</h1>
+            <p class="subtitle">Сервис для быстрых заметок и списков дел</p>
+        </header>
+
+        <main>
+            <form id="task-form" class="add-task-form">
+                <div class="input-group">
+                    
+                    <input type="text" id="task-input" placeholder="Например: Купить молоко" required>
+                    
+                    <button type="submit">
+                        ➕ Добавить задачу
+                    </button>
+                </div>
+                <p class="hint">Введите задачу и нажмите кнопку. Она появится в списке ниже.</p>
+            </form>
+
+            <section class="tasks-section">
+                <h2>📋 Мои задачи</h2>
+                
+                <ul id="task-list">
+                    <!-- Задачи будут добавляться сюда динамически -->
+                </ul>
+
+                <div id="empty-state" class="empty-state">
+                    Пока нет задач. Добавьте первую задачу!
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p style="text-align: center; color: #636e72; margin-top: 40px;">
+                QuickNote &copy; 2024. Простота и скорость — наш принцип!
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
