@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КосмоКот - Оплата</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #1a1a2e;
+            color: #ffffff;
+        }
+        .payment-container {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid #2d46b9;
+        }
+        h1 {
+            color: #e94560;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #b0bec5;
+            margin-bottom: 40px;
+        }
+        .promo-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .promo-title {
+            color: #4cc9f0;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        #promo-input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #2d46b9;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            color: #1a1a2e;
+        }
+        #promo-input:focus {
+            outline: none;
+            border-color: #4cc9f0;
+            box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.3);
+        }
+        
+        #apply-btn {
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #e94560, #b32e4d);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #apply-btn:hover {
+            background: linear-gradient(45deg, #b32e4d, #8a2340);
+            transform: translateY(-2px);
+        }
+        .hint {
+            color: #b0bec5;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .order-summary {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <header>
+            <h1>🚀 КосмоКот</h1>
+            <p class="subtitle">Оформление заказа</p>
+        </header>
+
+        <main>
+            <section class="promo-section">
+                <h2 class="promo-title">🎁 Введите промокод</h2>
+                <p>Получите скидку на ваш заказ!</p>
+                
+                <div class="input-group">
+                    
+                    <input type="text" id="promo-input" placeholder="Например: COSMIC2024">
+                    
+                    <button id="apply-btn">
+                        Применить
+                    </button>
+                </div>
+                
+                <p class="hint">Введите промокод и нажмите "Применить". Значение промокода появится в консоли.</p>
+            </section>
+
+            <section class="order-summary">
+                <h3>📦 Ваш заказ</h3>
+                <p>Лазерная указка космическая - 1 шт.</p>
+                <p>Космический корм - 2 уп.</p>
+                <p>Скафандр для кота - 1 шт.</p>
+                <p><strong>Итого: 4 999 ₽</strong></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>КосмоКот &copy; 2024. Доставляем радость вашим питомцам!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
