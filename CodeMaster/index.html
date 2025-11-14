@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КодМастер - Регистрация на вебинар</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .registration-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+        }
+        .webinar-info {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4a5568;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        #registration-form {
+            margin-top: 30px;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .hint {
+            color: #718096;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <header>
+            <h1>🚀 КодМастер</h1>
+            <p class="subtitle">Онлайн-школа программирования</p>
+        </header>
+
+        <main>
+            <section class="webinar-info">
+                <h2>💻 Вебинар: "JavaScript для начинающих"</h2>
+                <p><strong>Дата:</strong> 15 ноября 2024</p>
+                <p><strong>Время:</strong> 19:00 по МСК</p>
+                <p><strong>Продолжительность:</strong> 2 часа</p>
+            </section>
+
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="name">Имя и фамилия:</label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Уровень опыта:</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Выберите уровень</option>
+                        <option value="beginner">Начинающий</option>
+                        <option value="intermediate">Есть небольшой опыт</option>
+                        <option value="advanced">Опытный разработчик</option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    📝 Записаться на вебинар
+                </button>
+            </form>
+
+            <p class="hint">
+                После исправления кода: при нажатии кнопки страница не должна перезагружаться, 
+                а в консоли появится сообщение "Регистрация прошла успешно"
+            </p>
+        </main>
+
+        <footer>
+            <p style="text-align: center; color: #718096; margin-top: 40px;">
+                КодМастер &copy; 2024. Обучаем программированию с нуля!
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
