@@ -14,28 +14,28 @@ const books = [
 
 // Элементы DOM
 let currentBooks = [...books];
-const booksList = document.querySelector('.books-list');
+const listElement = document.querySelector('.books-list');
 const booksCounter = document.querySelector('#books-counter');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
 // Функция отрисовки книг - НУЖНО ИСПРАВИТЬ!
-function renderBooks() {
+function renderTasks() {
     console.log(`Отрисовываем ${currentBooks.length} книг`);
     
     // TODO: Добавить очистку списка перед отрисовкой новых книг
-    // booksList.innerHTML = '';
+    // listElement.innerHTML = '';
     
     currentBooks.forEach(book => {
-        const bookElement = document.createElement('li');
-        bookElement.className = 'book-item';
-        bookElement.innerHTML = `
+        const taskElement = document.createElement('li');
+        taskElement.className = 'book-item';
+        taskElement.innerHTML = `
             <h3 class="book-title">${book.title}</h3>
             <p class="book-author">${book.author}</p>
             <span class="book-genre">${getGenreName(book.genre)}</span>
         `;
         
         // ПРОБЛЕМА: этот метод добавляет книги, но не удаляет старые
-        booksList.append(bookElement);
+        listElement.append(taskElement);
     });
     
     updateBooksCounter();
@@ -50,7 +50,7 @@ function filterBooks(genre) {
     }
     
     console.log(`Отфильтровано по жанру "${genre}": ${currentBooks.length} книг`);
-    renderBooks();
+    renderTasks();
 }
 
 // Вспомогательные функции
@@ -88,5 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Первоначальная отрисовка
-    renderBooks();
+    renderTasks();
 });
