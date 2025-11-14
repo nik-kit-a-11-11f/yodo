@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f8f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.filters {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.filters h2 {
+    margin-bottom: 15px;
+    color: #2c5530;
+    font-size: 1.3rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: #f8f5f0;
+    border: 2px solid #e8e3d9;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.filter-btn:hover {
+    background: #e8e3d9;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #4a7c59;
+    color: white;
+    border-color: #4a7c59;
+}
+
+.main {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.books-info {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8f5f0;
+}
+
+#books-counter {
+    font-weight: 600;
+    color: #4a7c59;
+    font-size: 16px;
+}
+
+.books-container {
+    min-height: 400px;
+}
+
+.books-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    background: #f8f5f0;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #4a7c59;
+    transition: all 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #2c5530;
+}
+
+.book-author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.book-genre {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #4a7c59;
+    color: white;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    grid-column: 1 / -1;
+}
+
+.empty-state p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
