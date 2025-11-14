@@ -91,6 +91,9 @@ function updateTasksCounter() {
 addTaskForm.addEventListener('submit', (event) => {
     event.preventDefault();
     
+    // TODO: Получить доступ к полю ввода
+    // const input = document.querySelector('.task-input');
+    
     const taskText = taskInput.value.trim();
     addNewTask(taskText);
     
