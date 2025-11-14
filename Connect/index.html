@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Корпоративный чат</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chat-container {
+            width: 400px;
+            height: 600px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 16px 16px 0 0;
+            text-align: center;
+        }
+        .chat-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .chat-header p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 12px 16px;
+            border-radius: 18px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .message.user {
+            background: #667eea;
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+        .message.system {
+            background: #e9ecef;
+            color: #495057;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+        }
+        .message-time {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 16px 16px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        #message-form {
+            display: flex;
+            gap: 10px;
+        }
+        
+        #message-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        #message-input:focus {
+            border-color: #667eea;
+        }
+        
+        button[type="submit"] {
+            padding: 12px 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+        .hint {
+            color: #6c757d;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .typing-indicator {
+            color: #6c757d;
+            font-size: 12px;
+            font-style: italic;
+            padding: 5px 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>💼 Connect</h1>
+            <p>Корпоративный веб-чат</p>
+        </header>
+
+        <main class="chat-messages" id="chat-messages">
+            <div class="message system">
+                Добро пожаловать в корпоративный чат!
+                <div class="message-time">10:00</div>
+            </div>
+            <div class="message system">
+                Здесь вы можете общаться с коллегами в реальном времени.
+                <div class="message-time">10:00</div>
+            </div>
+            <!-- Сообщения будут добавляться здесь -->
+        </main>
+
+        <div class="typing-indicator" id="typing-indicator">
+            Кто-то печатает...
+        </div>
+
+        <div class="chat-input-container">
+            <form id="message-form">
+                
+                <input type="text" id="message-input" placeholder="Введите ваше сообщение..." required>
+                
+                <button type="submit">
+                    📤 Отправить
+                </button>
+            </form>
+            <p class="hint">
+                После исправления кода: поле ввода будет автоматически очищаться после отправки
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
