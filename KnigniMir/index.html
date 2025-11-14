@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный мир - Интернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Книжный мир</h1>
+            <p class="subtitle">Ваш проводник в мире литературы</p>
+        </header>
+
+        <div class="filters">
+            <h2>Фильтр по жанрам</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-genre="all">Все книги</button>
+                <button class="filter-btn" data-genre="fantasy">Фэнтези</button>
+                <button class="filter-btn" data-genre="sci-fi">Научная фантастика</button>
+                <button class="filter-btn" data-genre="detective">Детективы</button>
+                <button class="filter-btn" data-genre="romance">Романтика</button>
+            </div>
+        </div>
+
+        <main class="main">
+            <div class="books-info">
+                <span id="books-counter">Найдено книг: 0</span>
+            </div>
+            
+            <div class="books-container">
+                <ul class="books-list">
+                    <!-- Книги будут отображаться здесь -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
