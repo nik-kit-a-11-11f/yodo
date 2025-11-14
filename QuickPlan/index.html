@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPlan: Твой быстрый таск-менеджер</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .app-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .task-list-container {
+            margin-top: 30px;
+        }
+        #taskList {
+            list-style: none;
+            padding: 0;
+        }
+        #taskList li {
+            background: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .empty-state {
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>QuickPlan: Твой быстрый таск-менеджер</h1>
+        </header>
+
+        <main>
+            <section class="task-list-container">
+                <h2>Мои задачи</h2>
+                
+                <ul id="taskList">
+                    <!-- Задачи будут добавляться сюда динамически -->
+                </ul>
+
+                <div class="empty-state" id="emptyState">
+                    Пока нет задач. Добавьте первую задачу!
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>QuickPlan &copy; 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
