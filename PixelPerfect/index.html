@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Perfect - Трекер правок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Pixel Perfect</h1>
+            <p class="subtitle">Трекер правок от клиентов</p>
+        </header>
+
+        <main class="main">
+            <div class="add-task-section">
+                <h2>Добавить новую правку</h2>
+                <form class="add-task-form">
+                    <input type="text" class="task-input" placeholder="Опишите правку..." required>
+                    <button type="submit" class="add-task-btn">Добавить правку</button>
+                </form>
+            </div>
+
+            <div class="tasks-section">
+                <div class="tasks-header">
+                    <h2>Список правок</h2>
+                    <span id="tasks-counter">Всего: 0</span>
+                </div>
+                
+                <div class="tasks-container">
+                    <ul class="tasks-list">
+                        <!-- Правки будут отображаться здесь -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
