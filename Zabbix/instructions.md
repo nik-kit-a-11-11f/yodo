@@ -1,4 +1,4 @@
-1. Установка зависимостей
+# 1. Установка зависимостей
 # Убедитесь, что Python 3 установлен
 python3 --version
 
@@ -6,7 +6,7 @@ python3 --version
 # В данном скрипте используются только стандартные библиотеки
 
 
-2. Настройка системы
+# 2. Настройка системы
 # Создадим необходимые директории
 sudo mkdir -p /var/photostock/queue
 sudo mkdir -p /var/photostock/processed
@@ -20,7 +20,7 @@ sudo chown -R $USER:$USER /var/log/photostock_errors.log
 # sudo chown -R zabbix:zabbix /var/photostock
 
 
-3. Установка скрипта
+# 3. Установка скрипта
 # Скопируйте скрипт в системную директорию
 sudo cp image_processor.py /usr/local/bin/
 sudo chmod +x /usr/local/bin/image_processor.py
@@ -29,7 +29,7 @@ sudo chmod +x /usr/local/bin/image_processor.py
 sudo nano /etc/systemd/system/photostock.service
 
 
-4. Systemd service файл
+# 4. Systemd service файл
 # 4.1. Создаем файл сервиса
 sudo nano /etc/systemd/system/photostostock.service
 
@@ -60,7 +60,7 @@ sudo systemctl enable photostock.service
 sudo systemctl start photostock.service
 
 
-5. Проверяем статус
+# 5. Проверяем статус
 sudo systemctl status photostock.service
 
 # Смотрим логи
@@ -90,7 +90,7 @@ sudo journalctl -u photostock.service -f
 # /usr/lib/systemd/system/photostock.service
 
 
-6. Тестирование работы
+# 6. Тестирование работы
 bash
 # Создадим тестовые файлы в очереди
 for i in {1..15}; do
@@ -104,7 +104,7 @@ tail -f /var/log/photostock_errors.log
 ls -la /var/photostock/processed/
 
 
-7. Ручное управление процессом
+# 7. Ручное управление процессом
 bash
 # Запуск вручную (для тестирования)
 python3 /usr/local/bin/image_processor.py
