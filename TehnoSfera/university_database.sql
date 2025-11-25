@@ -1,5 +1,4 @@
--- Учебная база данных "Университет"
--- Удаляем базу если существует и создаем заново
+-- База данных интернет-магазина "Техно-Сфера"
 DROP DATABASE IF EXISTS technosfera_db;
 CREATE DATABASE technosfera_db;
 USE technosfera_db;
